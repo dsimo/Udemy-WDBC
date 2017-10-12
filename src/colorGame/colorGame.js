@@ -34,46 +34,14 @@ function reset() {
     //change colors of squares
     for (var i = 0; i < colors.length; i++) {
         if (colors[i]) {
-            console.log("block");
             squares[i].style.display = "block";
             squares[i].style.backgroundColor = colors[i];
         } else {
-            console.log("none");
             squares[i].style.display = "none";
         }
     }
     h1.style.backgroundColor = "steelblue";
 }
-
-
-/* easyButton.addEventListener("click", function() {
-    numSquares = 3;
-    easyButton.classList.add("selected");
-    hardButton.classList.remove("selected");
-    colors = generateRandomColors(numSquares);
-    pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor;
-    for (var i = 0; i < squares.length; i++) {
-        if (colors[i]) {
-            squares[i].style.backgroundColor = colors[i];
-        } else {
-            squares[i].style.display = "none";
-        }
-    };
-});
-
-hardButton.addEventListener("click", function() {
-    numSquares = 6;
-    easyButton.classList.remove("selected");
-    hardButton.classList.add("selected");
-    colors = generateRandomColors(numSquares);
-    pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor;
-    for (var i = 0; i < squares.length; i++) {
-        squares[i].style.backgroundColor = colors[i];
-        squares[i].style.display = "block";
-    };
-}); */
 
 resetButton.addEventListener("click", function() {
     reset();

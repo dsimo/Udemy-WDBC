@@ -15,6 +15,7 @@ for (var i = 0; i < modeButtons.length; i++) {
         this.classList.add("selected");
 
         this.textContent === "Easy" ? numSquares = 3 : numSquares = 6;
+        console.log("numSquares: " + numSquares);
         reset();
     });
 }
@@ -22,6 +23,7 @@ for (var i = 0; i < modeButtons.length; i++) {
 function reset() {
     //generate all new colors
     colors = generateRandomColors(numSquares);
+    console.log(colors);
     //pick a new random color
     pickedColor = pickColor();
     //change display to match picked color
@@ -34,7 +36,7 @@ function reset() {
         if (colors[i]) {
             console.log("block");
             squares[i].style.display = "block";
-            squares[i].style.backgroundColor == colors[i];
+            squares[i].style.backgroundColor = colors[i];
         } else {
             console.log("none");
             squares[i].style.display = "none";
